@@ -2,8 +2,12 @@ package Gestion_habitat;
 
 public class aviario extends habitats{
 
+    boolean puede_volar;
+
     public class aviario extends Gestion_habitat.habitats{
-        public aviario(){ 
+        public aviario(float temperatura, float humedad, boolean limpieza, boolean puede_volar){     
+            super(temperatura, humedad, limpieza);
+            this.puede_volar = puede_volar;
         }
         public String toString(){ //Para que nos devuelva el array de objetos que teine terrestre
             return "aviario";
@@ -20,4 +24,7 @@ public class aviario extends habitats{
         }
     }
 
+    public void setPuede_volar(boolean puede_volar) {
+        this.puede_volar = puede_volar;
+    }
 }
