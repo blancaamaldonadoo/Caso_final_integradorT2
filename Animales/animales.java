@@ -1,19 +1,24 @@
 package Animales;
 
+import Gestion_habitat.Habitat;
+
 public class animales{
 
-    String nombre;
-    String especie;
-    int id;
-    boolean salud;
-    boolean comportamiento;
-    boolean alimentacion;
-    
+    private String nombre;
+    private String especie;
+    private boolean salud;
+    private boolean comportamiento;
+    private Habitat habitat;
 
-    public animales(String nombre, String especie, int id){
+    public animales(String nombre, String especie, boolean salud, boolean comportamiento, Habitat habitat){
         this.nombre = nombre;
         this.especie = especie;
-        this.id = id;
+        this.salud = salud;
+        this.comportamiento = comportamiento;
+        this.habitat = habitat;
+    }
+
+    public animales(String nombre, String especie, boolean salud, boolean comportamiento, String habitat){
     }
 
     //GETTERS Y SETTERS:
@@ -33,14 +38,6 @@ public class animales{
         this.especie = especie;
     }
 
-    public int getId(){
-        return id;
-    }
-
-    public void setId(int id){
-        this.id = id;
-    }
-
     public boolean getSalud(){
         return salud;
     }      
@@ -57,64 +54,13 @@ public class animales{
         this.comportamiento = comportamiento;
     }
 
-    public void buenasalud(boolean salud){
-        if (salud == true)
-        System.out.println("El animal " + nombre + " se encuentra en buen estado de salud");
-        else System.out.println("El animal " + nombre + " se encuentra en mal estado de salud");
+
+    public Habitat getHabitat(){
+        return habitat;
     }
 
-    public void buencomportamiento(boolean comportamiento){
-        if (comportamiento == true)
-        System.out.println("El animal " + nombre + " se comporta de manera adecuada");
-        else System.out.println("El animal " + nombre + " se comporta de manera inadecuada");
-    }   
-
-    //metodo para resgistrar el nombre
-    public void registrarNombre(String nombre){
-        System.out.println("El nombre del animal es " + nombre);
+    public void setHabitat(Habitat habitat){
+        this.habitat = habitat;
     }
-    
-    //metodo para resgistrar la alimentacion
-    public void registrarAlimentacion(String alimentacion){
-        System.out.println("El animal " + nombre + " se alimenta de " + alimentacion);
-    }
-
-    //metodo para resgistrar la reproduccion
-    public void registrarReproduccion(String reproduccion){
-        System.out.println("El animal " + nombre + " se reproduce por " + reproduccion);
-    }
-
-    //metodo para resgistrar los cuidados
-    public void registrarCuidados(String cuidados){
-        System.out.println("El animal " + nombre + " necesita " + cuidados);
-    }
-
-    //metodo para resgistrar las enfermedades
-    public void registrarEnfermedades(String enfermedades){
-        System.out.println("El animal " + nombre + " puede sufrir de " + enfermedades);
-    }
-
-    //metodo para resgistrar las vacunas
-    public void registrarVacunas(String vacunas){
-        System.out.println("El animal " + nombre + " necesita vacunarse de " + vacunas);
-    }
-    
-    //metodo para resgistrar el habitat
-    public void registrarHabitat(String habitat){
-        System.out.println("El animal " + nombre + " vive en " + habitat);
-    }
-
-    //metodo para resgistrar el comportamiento
-    public void registrarComportamiento(boolean comportamiento){
-    System.out.println("El animal " + nombre + " se comporta de manera " + buencomportamiento(comportamiento));}
-
-    //metodo para resgistrar la salud   
-    public void registrarSalud(boolean salud){
-        System.out.println("El animal " + nombre + " se encuentra en " + buenasalud(salud));
-    }
-
-
-
-
 
 }

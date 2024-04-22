@@ -1,6 +1,6 @@
-package Gestion_habitat
+package Gestion_habitat;
 
-public class habitats{
+public class Habitat{
 
     float temperatura;
     float humedad;
@@ -41,7 +41,7 @@ public class habitats{
 
 @Override
 public String toString(){
-    return
+    return "Temperatura: " + temperatura + " Humedad: " + humedad + " Limpieza: " + limpieza;
 }
 
 }

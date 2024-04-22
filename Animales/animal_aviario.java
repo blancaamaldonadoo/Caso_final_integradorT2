@@ -8,7 +8,7 @@ public class animal_aviario extends animales{
     boolean tipo_aviario;
     
     public animal_aviario(boolean vuela, boolean pico, boolean plumaje, boolean tipo_aviario, String nombre, String especie, int id, boolean salud, boolean comportamiento, boolean alimentacion) {
-        super(nombre, especie, id, salud, comportamiento, alimentacion);    
+        super(nombre, "Aviario", id, salud, comportamiento);    
         this.vuela = vuela;
         this.pico = pico;
         this.plumaje = plumaje;

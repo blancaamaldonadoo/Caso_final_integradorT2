@@ -1,18 +1,14 @@
 package Animales;
 
+import Gestion_habitat.Habitat;
+import Gestion_habitat.terrestres;
+
 public class animal_terrestre {
 
-    boolean patas;
-    boolean cola;
-    boolean pelo;
-    boolean tipo_terrestre;
-    
+    int patas;
+
+public animal_terrestre(String nombre, String especie, boolean salud, boolean comportamiento, int patas) {
+    super(nombre, especie, salud, comportamiento, terrestre);
+    this.patas = patas;
 }
 
-public animal_terrestre(boolean patas, boolean cola, boolean pelo, boolean tipo_terrestre, String nombre, String especie, int id, boolean salud, boolean comportamiento, boolean alimentacion) {
-    super(nombre, especie, id, salud, comportamiento, alimentacion);
-    this.patas = patas;
-    this.cola = cola;
-    this.pelo = pelo;
-    this.tipo_terrestre = tipo_terrestre;
-}
